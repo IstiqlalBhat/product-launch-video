@@ -3,11 +3,11 @@
 **Your coding agent makes the launch video for your app.** Point it at your website, repo, or running app, and get a short launch film in the style of Apple, Stripe, or Linear: cut to music, built from your product's real screens, and rendered from code. Not a template with your logo on a grey gradient.
 
 <p align="center">
-  <a href="demo/supabase-launch-film.mp4"><img src="demo/supabase-weekend.gif" width="720" alt="A pencil sketch of an app on a napkin turns into a working app, and the people who sign up land in the real Supabase dashboard"></a>
+  <a href="demo/supabase-hidden-half.mp4"><img src="demo/supabase-hidden-half.gif" width="720" alt="An iceberg split at the waterline: the app on its tip above the water, a much larger hidden mass below"></a>
 </p>
 <p align="center">
-  <b><a href="demo/supabase-launch-film.mp4">▶ Watch the full 30-second film, with sound</a></b><br>
-  <sub>"The Weekend", an unofficial Supabase launch film made with this skill in Claude Code. Not affiliated with Supabase.</sub>
+  <b><a href="demo/supabase-hidden-half.mp4">▶ Watch the full 40-second film, with sound</a></b><br>
+  <sub>"The Hidden Half", an unofficial Supabase launch film made with this skill in Claude Code. Not affiliated with Supabase.</sub>
 </p>
 
 It does one job: launch videos, feature announcements, and promo clips for software products. It is not built for tutorials, vlogs, or long explainers.
@@ -68,7 +68,7 @@ The skill keeps only rules that protect the film (real product pixels, approval 
 
 ## How the demo was made
 
-The film at the top was made with this skill in Claude Code. The skill agreed the brief and the storyline with a person (a non-technical audience, one person's weekend), captured the real Supabase dashboard filled with demo data, generated the music with ElevenLabs, built every shot in HyperFrames, and reviewed its own rendered frames before each check-in. Sources: Supabase Studio screens (Apache-2.0), Natural Earth land data (public domain), Manrope and Caveat fonts (OFL). Supabase's name and logo belong to Supabase.
+The film at the top was made with this skill in Claude Code. The skill agreed the story with a person (every app has a half you see and a hidden half, and Supabase is the hidden half), had them pick the narrator and the music by ear, and generated both with ElevenLabs: the music in timed sections around the script, the narration cut so its key words land on the beats. It built the ocean, the iceberg and the globe in Three.js inside HyperFrames, showed the real Supabase dashboard (filled with demo data) as flat screens, and reviewed its own rendered frames before each check-in. Sources: Supabase Studio screens (Apache-2.0), Natural Earth land data (public domain), three.js (MIT), Manrope and Inter fonts (OFL). Supabase's name and logo belong to Supabase.
 
 ## Contributing
 
