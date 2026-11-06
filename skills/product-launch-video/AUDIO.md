@@ -26,12 +26,12 @@ When there is a voice, let the user hear each shortlisted voice read a line of t
 
 ## The key
 
-The script reads `ELEVENLABS_API_KEY` from its environment. If the environment doesn't have it, the script takes it from the first of these files that contains it: a `.env` in the working directory or any directory above it, then `~/.config/video-director/.env`, then `~/.openclaw/.env`. It reads only that one key from those files. If `check` says the key is missing, tell the user how to provide it on the platform you are running on. Never let the value pass through the chat.
+The script reads `ELEVENLABS_API_KEY` from its environment. If the environment doesn't have it, the script takes it from the first of these files that contains it: a `.env` in the working directory or any directory above it, then `~/.config/product-launch-video/.env`, then `~/.openclaw/.env`. It reads only that one key from those files. If `check` says the key is missing, tell the user how to provide it on the platform you are running on. Never let the value pass through the chat.
 
 - **Any host with a project `.env`:** the user adds `ELEVENLABS_API_KEY=...` to the `.env` of the project or workspace, and the script finds it when you run it from inside that folder.
-- **OpenClaw, self-hosted:** the operator puts the key in `~/.openclaw/.env`, and the script reads it at once (the gateway itself reads that file only when it starts). Or the operator sets `skills.entries.video-director.apiKey` in `openclaw.json`, because this skill declares `ELEVENLABS_API_KEY` as its `primaryEnv`. A SecretRef works there, and it applies from the next run.
+- **OpenClaw, self-hosted:** the operator puts the key in `~/.openclaw/.env`, and the script reads it at once (the gateway itself reads that file only when it starts). Or the operator sets `skills.entries.product-launch-video.apiKey` in `openclaw.json`, because this skill declares `ELEVENLABS_API_KEY` as its `primaryEnv`. A SecretRef works there, and it applies from the next run.
 - **Claude Code:** the user copies the key and types this in the prompt; the key goes from the clipboard into the file without appearing in the chat:
-  `! (umask 077; mkdir -p ~/.config/video-director && printf 'ELEVENLABS_API_KEY=%s\n' "$(pbpaste)" > ~/.config/video-director/.env)`
+  `! (umask 077; mkdir -p ~/.config/product-launch-video && printf 'ELEVENLABS_API_KEY=%s\n' "$(pbpaste)" > ~/.config/product-launch-video/.env)`
 
 An authentication error (HTTP 400 or 401 with `invalid_api_key`) means the key is wrong or revoked.
 

@@ -1,4 +1,4 @@
-// ElevenLabs helper for the video-director skill.
+// ElevenLabs helper for the product-launch-video skill.
 // Usage: node eleven.mjs <command> [args] [--force] [--fps=30]
 // Key: ELEVENLABS_API_KEY from the environment, else the first .env that has it (see findKey).
 //   check                                    is the key set and valid; credits left (never prints the key)
@@ -26,7 +26,7 @@ function findKey() {
     files.push(`${d}/.env`);
     if (d === dirname(d)) break;
   }
-  files.push(`${homedir()}/.config/video-director/.env`, `${homedir()}/.openclaw/.env`);
+  files.push(`${homedir()}/.config/product-launch-video/.env`, `${homedir()}/.openclaw/.env`);
   for (const f of files) {
     try {
       const key = keyIn(readFileSync(f, "utf8"));
@@ -36,7 +36,7 @@ function findKey() {
 }
 process.env.ELEVENLABS_API_KEY ||= findKey() ?? "";
 const SETUP = `ELEVENLABS_API_KEY is not set: not in the environment, a .env from here upward,
-~/.config/video-director/.env, or ~/.openclaw/.env.
+~/.config/product-launch-video/.env, or ~/.openclaw/.env.
 The user creates a key at https://elevenlabs.io/app/settings/api-keys. How it reaches this process
 depends on the platform (AUDIO.md, "The key"). Never ask for the key in the chat.`;
 const API = "https://api.elevenlabs.io";

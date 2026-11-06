@@ -1,12 +1,12 @@
 ---
-name: video-director
-description: Directs and builds a video from code (HyperFrames, Remotion, or whatever fits). It first agrees a short brief with the user through focused grilling, then builds freely, reviews its own rendered frames, and revises by frame number. It can add voice, music, sound effects, and footage from production-grade sources (ElevenLabs, Higgsfield, licensed tracks). Use when the user wants a launch video, product clip, demo or explainer video, or motion graphics, or asks to make, direct, or revise a video. Load it before any renderer-specific skill, such as hyperframes or remotion.
+name: product-launch-video
+description: Directs and builds a product launch video for a software product, rendered from code (HyperFrames, Remotion, or whatever fits): a short, music-driven film in the style of an Apple, Stripe, or Linear launch, built from the product's real screens. It agrees a brief with the user through focused grilling, then builds freely, reviews its own rendered frames, and revises by frame number. It adds voice, music, sound effects, and generated footage from production-grade sources (ElevenLabs, Higgsfield, licensed tracks). Use when the user wants a launch video, feature announcement, product teaser, or promo clip for an app, website, or developer tool. Load it before any renderer-specific skill, such as hyperframes or remotion.
 metadata: { "openclaw": { "primaryEnv": "ELEVENLABS_API_KEY" } }
 ---
 
-# Video Director
+# Product Launch Video
 
-You are the director. You choose the renderer, the look, the motion, the pacing, and where sound and footage come from: generated with production-grade models, licensed from the web, or supplied by the user. Never settle for local voice or music models: they are not good enough. If no good source is available, ask the user for one. This skill holds only what keeps a film true and revisable, plus verified facts that save you time. Everything else is your call.
+You are the director of a short launch film for a software product. You choose the renderer, the look, the motion, the pacing, and where sound and footage come from: generated with production-grade models, licensed from the web, or supplied by the user. Never settle for local voice or music models: they are not good enough. If no good source is available, ask the user for one. This skill holds only what keeps a film true and revisable, plus verified facts that save you time. Everything else is your call.
 
 ## Non-negotiables
 

@@ -1,8 +1,10 @@
-# video-director
+# product-launch-video
 
-**Turn your coding agent into a motion director.** Ask for a launch film, a product clip, or an explainer, and get a finished video rendered from code — not a template with your logo on a grey gradient.
+**Your coding agent makes the launch video for your app.** Point it at your website, repo, or running app, and get a short launch film in the style of Apple, Stripe, or Linear: cut to music, built from your product's real screens, and rendered from code. Not a template with your logo on a grey gradient.
 
-`video-director` is an [Agent Skill](https://agentskills.io) for Claude Code, OpenClaw, and any agent that loads `SKILL.md` skills. It works with [HyperFrames](https://github.com/heygen-com/hyperframes), [Remotion](https://www.remotion.dev), or whatever renderer fits the job.
+It does one job: launch videos, feature announcements, and promo clips for software products. It is not built for tutorials, vlogs, or long explainers.
+
+`product-launch-video` is an [Agent Skill](https://agentskills.io) for Claude Code, OpenClaw, and any agent that loads `SKILL.md` skills. It works with [HyperFrames](https://github.com/heygen-com/hyperframes), [Remotion](https://www.remotion.dev), or whatever renderer fits the job.
 
 ```text
 > make a 30-second launch video for example.com
@@ -19,7 +21,7 @@
 
 ## Sound and footage
 
-- **Voice, music, effects** through ElevenLabs, with a bundled zero-dependency script ([`scripts/eleven.mjs`](skills/video-director/scripts/eleven.mjs)): voice search and design, narration with per-word frame timings, music, and sound effects. You pick the voice by ear from samples that read your actual script.
+- **Voice, music, effects** through ElevenLabs, with a bundled zero-dependency script ([`scripts/eleven.mjs`](skills/product-launch-video/scripts/eleven.mjs)): voice search and design, narration with per-word frame timings, music, and sound effects. You pick the voice by ear from samples that read your actual script.
 - **Generated footage** through Higgsfield's MCP server (OAuth, works from headless hosts too).
 - **Licensed tracks and stock**, with each file's source and licence recorded in the brief.
 
@@ -28,10 +30,10 @@ No local TTS or music models: they aren't good enough for a launch film.
 ## Install
 
 ```bash
-npx skills@latest add IstiqlalBhat/video-director
+npx skills@latest add IstiqlalBhat/product-launch-video
 ```
 
-Or copy [`skills/video-director`](skills/video-director) into your agent's skills folder (for Claude Code, `~/.claude/skills/`; on OpenClaw, any folder in `skills.load.extraDirs`).
+Or copy [`skills/product-launch-video`](skills/product-launch-video) into your agent's skills folder (for Claude Code, `~/.claude/skills/`; on OpenClaw, any folder in `skills.load.extraDirs`).
 
 **Needs:** Node 18+ and ffmpeg. The renderer (HyperFrames or Remotion) is installed per project when the video is built.
 
@@ -39,20 +41,20 @@ Or copy [`skills/video-director`](skills/video-director) into your agent's skill
 
 Both are optional; without them the skill builds silent, code-only films or asks you for files.
 
-- **ElevenLabs:** `ELEVENLABS_API_KEY` in the environment, or in a `.env` in the project (or any folder above it), `~/.config/video-director/.env`, or `~/.openclaw/.env`. The skill never asks for the key in chat. See [AUDIO.md](skills/video-director/AUDIO.md#the-key).
-- **Higgsfield:** its MCP server with OAuth. See [FOOTAGE.md](skills/video-director/FOOTAGE.md).
+- **ElevenLabs:** `ELEVENLABS_API_KEY` in the environment, or in a `.env` in the project (or any folder above it), `~/.config/product-launch-video/.env`, or `~/.openclaw/.env`. The skill never asks for the key in chat. See [AUDIO.md](skills/product-launch-video/AUDIO.md#the-key).
+- **Higgsfield:** its MCP server with OAuth. See [FOOTAGE.md](skills/product-launch-video/FOOTAGE.md).
 
-Check the helper without a key: `node skills/video-director/scripts/eleven.mjs selftest`.
+Check the helper without a key: `node skills/product-launch-video/scripts/eleven.mjs selftest`.
 
 ## What's inside
 
 | File | Holds |
 |---|---|
-| [SKILL.md](skills/video-director/SKILL.md) | The non-negotiables, the quality bar, the brief, check-ins, and the review loop |
-| [CRAFT.md](skills/video-director/CRAFT.md) | Beat grids, motion and transition vocabulary, sound design, template looks to avoid |
-| [REFERENCE.md](skills/video-director/REFERENCE.md) | Verified HyperFrames and Remotion commands, a BRIEF example, contact sheets, export checks |
-| [AUDIO.md](skills/video-director/AUDIO.md) | The ElevenLabs helper, how the key reaches the agent, landing hits on frames |
-| [FOOTAGE.md](skills/video-director/FOOTAGE.md) | Higgsfield via Claude Code, OpenClaw, or mcporter, and placing clips on frames |
+| [SKILL.md](skills/product-launch-video/SKILL.md) | The non-negotiables, the quality bar, the brief, check-ins, and the review loop |
+| [CRAFT.md](skills/product-launch-video/CRAFT.md) | Beat grids, motion and transition vocabulary, sound design, template looks to avoid |
+| [REFERENCE.md](skills/product-launch-video/REFERENCE.md) | Verified HyperFrames and Remotion commands, a BRIEF example, contact sheets, export checks |
+| [AUDIO.md](skills/product-launch-video/AUDIO.md) | The ElevenLabs helper, how the key reaches the agent, landing hits on frames |
+| [FOOTAGE.md](skills/product-launch-video/FOOTAGE.md) | Higgsfield via Claude Code, OpenClaw, or mcporter, and placing clips on frames |
 
 The skill keeps only rules that protect the film (real product pixels, approval before spend, deterministic frames, licences) and facts verified in real runs. Every creative decision is left to the model.
 
