@@ -2,6 +2,14 @@
 
 **Your coding agent makes the launch video for your app.** Point it at your website, repo, or running app, and get a short launch film in the style of Apple, Stripe, or Linear: cut to music, built from your product's real screens, and rendered from code. Not a template with your logo on a grey gradient.
 
+<p align="center">
+  <a href="demo/supabase-launch-film.mp4"><img src="demo/supabase-weekend.gif" width="720" alt="A pencil sketch of an app on a napkin turns into a working app, and the people who sign up land in the real Supabase dashboard"></a>
+</p>
+<p align="center">
+  <b><a href="demo/supabase-launch-film.mp4">▶ Watch the full 30-second film, with sound</a></b><br>
+  <sub>"The Weekend", an unofficial Supabase launch film made with this skill in Claude Code. Not affiliated with Supabase.</sub>
+</p>
+
 It does one job: launch videos, feature announcements, and promo clips for software products. It is not built for tutorials, vlogs, or long explainers.
 
 `product-launch-video` is an [Agent Skill](https://agentskills.io) for Claude Code, OpenClaw, and any agent that loads `SKILL.md` skills. It works with [HyperFrames](https://github.com/heygen-com/hyperframes), [Remotion](https://www.remotion.dev), or whatever renderer fits the job.
@@ -57,6 +65,10 @@ Check the helper without a key: `node skills/product-launch-video/scripts/eleven
 | [FOOTAGE.md](skills/product-launch-video/FOOTAGE.md) | Higgsfield via Claude Code, OpenClaw, or mcporter, and placing clips on frames |
 
 The skill keeps only rules that protect the film (real product pixels, approval before spend, deterministic frames, licences) and facts verified in real runs. Every creative decision is left to the model.
+
+## How the demo was made
+
+The film at the top was made with this skill in Claude Code. The skill agreed the brief and the storyline with a person (a non-technical audience, one person's weekend), captured the real Supabase dashboard filled with demo data, generated the music with ElevenLabs, built every shot in HyperFrames, and reviewed its own rendered frames before each check-in. Sources: Supabase Studio screens (Apache-2.0), Natural Earth land data (public domain), Manrope and Caveat fonts (OFL). Supabase's name and logo belong to Supabase.
 
 ## Contributing
 
